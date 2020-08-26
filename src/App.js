@@ -34,6 +34,9 @@ function App() {
                 <div className="grid-container">
                   <div className="grid-item">{subscriber.name}</div>
                   <div className="grid-item">{subscriber.phone}</div>
+                  <span className="grid-item action-btn-container">
+                    <button className="custom-btn delete-btn">Delete</button>
+                  </span>
                 </div>
               );
             }
