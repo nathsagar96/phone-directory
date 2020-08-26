@@ -3,6 +3,19 @@ import Header from './Header';
 import './App.css';
 
 function App() {
+  let subscribers = [
+    {
+      id: 1,
+      name: 'Sagar',
+      phone: '888888888'
+    },
+    {
+      id: 1,
+      name: 'Bhavana',
+      phone: '999999999'
+    }
+  ];
+
   return (
     <div>
       <Header />
@@ -13,6 +26,20 @@ function App() {
           <span className="grid-item name-heading">Name</span>
           <span className="grid-item phone-heading">Phone</span>
         </div>
+
+        {
+          subscribers.map(
+            (subscriber) => {
+              return (
+                <div className="grid-container">
+                  <div className="grid-item">{subscriber.name}</div>
+                  <div className="grid-item">{subscriber.phone}</div>
+                </div>
+              );
+            }
+          )
+        }
+
       </div>
     </div>
   );
