@@ -3,11 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import './common/common.css';
 import * as serviceWorker from './serviceWorker';
-import App from './App';
+import PhoneDirectory from './PhoneDirectory';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <PhoneDirectory />
   </React.StrictMode>,
   document.getElementById('root')
 );
