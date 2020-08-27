@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
-import Header from './common/Header';
+import Header from './Header.js';
 import './ShowSubscribers.css';
 import { Link } from 'react-router-dom';
 
 class ShowSubscribers extends Component {
 
-  constructor() {
-    super();
-    this.state = {
-      subscriberList: []
-    }
+  onDeletedClick = (subscriberId) => {
+    this.props.deleteSubscriberHandler(subscriberId);
   }
 
   render() {
@@ -32,7 +29,7 @@ class ShowSubscribers extends Component {
                     <div className='grid-item'>{subscriber.name}</div>
                     <div className='grid-item'>{subscriber.phone}</div>
                     <span className='grid-item action-btn-container'>
-                      <button className='custom-btn delete-btn'>Delete</button>
+                      <button className='custom-btn delete-btn' onClick={this.onDeletedClick.bind(this, subscriber.id)}>Delete</button>
                     </span>
                   </div>
                 );
